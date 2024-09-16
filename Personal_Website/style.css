@@ -1,0 +1,564 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: white;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #052759a8;
+    padding: 10px 20px;
+    z-index: 999;
+    text-align: right;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+#navbar ul li {
+    margin-right: 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar ul li a:hover {
+    color: #A1E44D;
+}
+
+/* Active state */
+#navbar ul li a.active {
+    color: #A1E44D; /* Yellow shade for active link */
+}
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/bg.jpg') no-repeat center center/cover;
+    padding: 0 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Education Detail Section */
+.education-detail {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.education-detail i {
+    font-size: 2rem; /* Icon size */
+    margin-right: 15px; /* Space between icon and text */
+    color: #A1E44D; /* Icon color */
+}
+
+.education-info {
+    line-height: 1.0;
+}
+
+.education-info span {
+    display: block;
+    font-size: 1.0rem; /* Adjust font size as needed */
+}
+
+.education-institute {
+    font-weight: bold;
+}
+
+.education-course, .education-batch {
+    margin-top: 5px; /* Space between lines */
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.hero-left h1 {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 3px;
+    color: #000000;
+}
+
+/* Tagline Styling */
+.tagline {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.tagline span {
+    color: #A1E44D; /* Yellow color for emphasis */
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.tagline span:hover {
+    transform: scale(1.1); /* Pop-out effect on hover */
+    color: #052659; /* Blue color on hover */
+}
+
+
+.hero-right {
+    flex: 1;
+    background: #5483b3;
+    padding: 40px;
+    border-radius: 10px;
+    animation: slideInRight 1.5s ease-in-out;
+    box-shadow: 0 4px 8px #A1E44D;
+    transition: transform 0.3s ease
+}
+.hero-right:hover{
+    background-color: #052659;
+    transform: scale(1.05);
+}
+.hero-right h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-right p {
+    font-size: 1.2rem;
+}
+
+/* General Box Styles */
+.work-box, .skill-box, .publication-box, .services-box {
+    background-color: rgba(#4B0082, 0.3); /* Default background color */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    text-align: center;
+}
+
+/* Hover Effects for Boxes */
+.work-box:hover, .skill-box:hover, .publication-box:hover, .services-box:hover {
+    background-color: rgba(#3C5A99, 0.3); /* Background color on hover */
+}
+
+/* Services Section */
+#services {
+    padding: 100px 50px;
+    background-color: #ffffff;
+    text-align: center;
+    color: white;
+}
+
+#services h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.services-box {
+    background-color: #5483b3;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    box-shadow: 0 4px 8px #A1E44D;
+}
+
+.services-box i {
+    font-size: 3rem;
+    color: #00FFFF;
+    margin-bottom: 15px;
+}
+
+.services-box:hover {
+    background-color: #052659;
+    transform: scale(1.05);
+}
+
+.services-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.services-box p {
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; /* Stack boxes on smaller screens */
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services-box {
+        width: calc(100% - 20px); /* Stack boxes on smaller screens */
+    }
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 100px 50px;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+}
+
+/* Adjusting the skills container for grid layout */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
+    gap: 20px; /* Space between boxes */
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.skills-box {
+    width: 400px;
+    background-color: #5483b3;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 8px #A1E44D;
+    transition: all 0.3s ease;
+}
+
+.skills-box:hover {
+    background-color: #052659;
+    transform: scale(1.05); 
+}
+
+
+.skills-box h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-item {
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.certification-item {
+    background-color: #052659;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    text-align: center;
+}
+
+.certification-item:hover {
+    background-color: #A1E44D;
+}
+
+.certification-item p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.soft-skill {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+}
+
+.soft-skill i {
+    font-size: 2rem;
+    color: #00FFFF;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.soft-skill p {
+    font-size: 1.2rem;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Make it single column on smaller screens */
+    }
+}
+
+
+/* Work Section */
+#work {
+    padding: 100px 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#work h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.work-buttons {
+    margin-bottom: 30px;
+}
+
+.work-btn {
+    background-color: #5483b3;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.work-btn:hover {
+    background-color: #A1E44D;
+}
+
+.work-btn.active {
+    background-color: #A1E44D;
+    color: white;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Work Subsections */
+.work-subsection {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.work-box {
+    background-color: #5483b3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    width: 410px; /* Adjust as needed */
+    box-shadow: 0 4px 8px #A1E44D;
+}
+
+.work-box:hover {
+    background-color: #052659;
+    transform: scale(1.05);
+}
+
+.work-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.work-box p {
+    font-size: 1.2rem;
+}
+
+.work-box .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #00FFFF;
+}
+
+
+.work-box a {
+    color: #00FFFF; /* Change the color to your desired color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make the link text bold */
+}
+
+.work-box a:hover {
+    color: #A1E44D; /* Change the color when hovering over the link */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 100px 50px;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-center {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-center h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #000000; /* Yellow shade */
+    margin-bottom: 40px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.3s;
+    color: #5483b3; /* Default color for icons */
+    font-size: 3rem; /* Larger size for social icons */
+}
+
+.social-link:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #A1E44D; /* Yellow color on hover */
+}
+
+
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem; /* Size of the icon */
+    color: #052659; /* Default color of the icon */
+    background-color: #5483b3; /* Background color */
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    color: #5483b3; /* Color on hover */
+    background-color: #A1E44D; /* Background color on hover */
+}
+
+.scroll-to-top i {
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 3rem;
+    }
+
+    .hero-right h2 {
+        font-size: 2rem;
+    }
+
+    .hero-right p {
+        font-size: 1rem;
+    }
+}
